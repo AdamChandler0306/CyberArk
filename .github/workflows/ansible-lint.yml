@@ -8,10 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: ansible/ansible-lint-action@v4.1.0.post0
     - name: Lint CyberArk Ansible Playbooks
       uses: ansible/ansible-lint-action@master
       with:
         targets: "Ansible/aam_remove.yml Ansible/create-safe.yml Ansible/disable-server-manager.yml Ansible/Restart-aam-services.yml Ansible/rhel-aam-agent-install.yml Ansible/rhel-aam-agent-uninstall.yml Ansible/vault-account.yml"
         args: ""
-        
