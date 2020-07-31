@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: ansible/ansible-lint-action@v4.1.0.post0
+    - uses: actions/checkout@v2
+
     - name: Lint CyberArk Ansible Playbooks
       uses: ansible/ansible-lint-action@master
       with:
