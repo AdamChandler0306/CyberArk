@@ -2,6 +2,7 @@
 - name: CyberArk Windows Service Restart
   hosts: all
   tasks:
+  
     -name: Windows Service Restart
       win_service:
         name: CyberArk Application Password Provider

@@ -1,5 +1,0 @@
----
-- name: Vault CyberArk Account
-  hosts: all
-  gather_facts: no
-  tasks:

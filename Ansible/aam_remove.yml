@@ -3,6 +3,7 @@
   hosts: all
   gather_facts: no
   tasks:
+  
     - name: uninstall AIM
       yum:
         name: CARKaim

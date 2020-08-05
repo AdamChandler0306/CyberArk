@@ -4,6 +4,7 @@
   become: true
   gather_facts: no
   tasks:
+  
     - name: check for redhat-lsb and chkconfig installs
       yum:
         name: "{{ packages }}"
