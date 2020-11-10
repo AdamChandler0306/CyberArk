@@ -10,10 +10,16 @@ New-PASSession -Credential $credentials -BaseURI https://pvwa
 # Creating a new safe.
 Add-PASSafe -SafeName  -Description C7 -ManagingCPM PasswordManager -NumberOfDaysRetention 7
 # Adding the Vault Admins group to the safe members with all permissions.
-Add-PASSafeMember -SafeName  -MemberName "Vault Admins" -SearchIn Vault -UseAccounts $true -RetrieveAccounts $true -ListAccounts $true -AddAccounts $true -UpdateAccountContent $true -UpdateAccountProperties $true -InitiateCPMAccountManagementOperations $true -SpecifyNextAccountContent $true -RenameAccounts $true -DeleteAccounts $true -UnlockAccounts $true -ManageSafe $true -ManageSafeMembers $true -BackupSafe $true -ViewAuditLog $true -ViewSafeMembers $true -AccessWithoutConfirmation $true -CreateFolders $true -DeleteFolders $true -MoveAccountsAndFolders $true   
+Add-PASSafeMember -SafeName  -MemberName "Vault Admins" -SearchIn Vault -UseAccounts $true -RetrieveAccounts $true -ListAccounts $true -AddAccounts $true -UpdateAccountContent $true -UpdateAccountProperties $true -InitiateCPMAccountManagementOperations $true -SpecifyNextAccountContent $true -RenameAccounts $true -DeleteAccounts $true -UnlockAccounts $true -ManageSafe $true -ManageSafeMembers $true -BackupSafe $true -ViewAuditLog $true -ViewSafeMembers $true -AccessWithoutConfirmation $true -CreateFolders $true -DeleteFolders $true -MoveAccountsAndFolders $true
 # Adding the safe user LDAP based group to the safe members.
-# TODO: Define new user permissions.
-Add-PASSafeMember -SafeName  -MemberName "" -SearchIn domain -UseAccounts $true -RetrieveAccounts $true -ListAccounts $true -AddAccounts $true -UpdateAccountContent $true -UpdateAccountProperties $true -InitiateCPMAccountManagementOperations $true -SpecifyNextAccountContent $true -RenameAccounts $true -DeleteAccounts $true -UnlockAccounts $true -ViewAuditLog $true -ViewSafeMembers $true -AccessWithoutConfirmation $true -MoveAccountsAndFolders $true       
+#//TODO: Define new user permissions.
+#//TODO: Test safe creation and then test removal of creation user.
+Add-PASSafeMember -SafeName  -MemberName "" -SearchIn domain -UseAccounts $true -RetrieveAccounts $true -ListAccounts $true -AddAccounts $true -UpdateAccountContent $true -UpdateAccountProperties $true -InitiateCPMAccountManagementOperations $true -SpecifyNextAccountContent $true -RenameAccounts $true -DeleteAccounts $true -UnlockAccounts $true -ViewAuditLog $true -ViewSafeMembers $true -AccessWithoutConfirmation $true -MoveAccountsAndFolders $true
+# Adding the Vault Admins LDAP based group to the safe members.
+Add-PASSafeMember -SafeName  -MemberName "" -SearchIn domain -UseAccounts $true -RetrieveAccounts $true -ListAccounts $true -AddAccounts $true -UpdateAccountContent $true -UpdateAccountProperties $true -InitiateCPMAccountManagementOperations $true -SpecifyNextAccountContent $true -RenameAccounts $true -DeleteAccounts $true -UnlockAccounts $true -ViewAuditLog $true -ViewSafeMembers $true -AccessWithoutConfirmation $true -MoveAccountsAndFolders $true
+# Adding the Auditors LDAP based group to the safe members.
+Add-PASSafeMember -SafeName  -MemberName "" -SearchIn domain -UseAccounts $true -RetrieveAccounts $true -ListAccounts $true -AddAccounts $true -UpdateAccountContent $true -UpdateAccountProperties $true -InitiateCPMAccountManagementOperations $true -SpecifyNextAccountContent $true -RenameAccounts $true -DeleteAccounts $true -UnlockAccounts $true -ViewAuditLog $true -ViewSafeMembers $true -AccessWithoutConfirmation $true -MoveAccountsAndFolders $true
+# Adding the Users LDAP based group to the safe members.
+Add-PASSafeMember -SafeName  -MemberName "" -SearchIn domain -UseAccounts $true -RetrieveAccounts $true -ListAccounts $true -AddAccounts $true -UpdateAccountContent $true -UpdateAccountProperties $true -InitiateCPMAccountManagementOperations $true -SpecifyNextAccountContent $true -RenameAccounts $true -DeleteAccounts $true -UnlockAccounts $true -ViewAuditLog $true -ViewSafeMembers $true -AccessWithoutConfirmation $true -MoveAccountsAndFolders $true
 # Removing the User from the safe members that created the safe.
-Remove-PASSafeMember -SafeName  -MemberName "retrieved user"
-
+#Remove-PASSafeMember -SafeName  -MemberName "retrieved user"
