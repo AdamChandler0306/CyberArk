@@ -13,6 +13,7 @@ if ($Description) {
     Write-Warning -Message "The description must be entered."
 }
 # We will now ensure that each of the necessary PowerShell modules used are installed.
+Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 Install-Module psPAS
 Install-Module CredentialRetriever
 # Retrieving the Credential to be used to create the new safe via Central Credential Provider.
