@@ -11,6 +11,8 @@ A start at monitoring the CyberArk PSM Components.
 
 ## Prerequisites
 
+Docker
+
 ## Getting Started
 
 ```
