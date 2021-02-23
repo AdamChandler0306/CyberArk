@@ -4,10 +4,12 @@ A start at monitoring the CyberArk PSM Components.
 
 ## Table of Contents <!-- omit in toc -->
 
+- [Prerequisites](#Prerequisites)
 - [Getting Started](#getting)
 - [Maintainers](#maintainers)
 - [Contributions](#contributions)
 
+## Prerequisites
 
 ## Getting Started
 
